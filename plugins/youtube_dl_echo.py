@@ -35,26 +35,26 @@ from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*http.*"))
 async def echo(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
-        await update.reply_text("You are B A N N E D 🤣🤣🤣🤣")
+        await update.reply_text("Fuiste B A N N E D 🤣🤣🤣🤣")
         return
     update_channel = Config.UPDATE_CHANNEL
     if update_channel:
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
             if user.status == "kicked":
-               await update.reply_text("🤭 Sorry Dude, You are **B A N N E D 🤣🤣🤣**")
+               await update.reply_text("🤭 Lo siento amigo, estas **B A N N E D 🤣🤣🤣**")
                return
         except UserNotParticipant:
             #await update.reply_text(f"Join @{update_channel} To Use Me")
             await update.reply_text(
-                text="**Join My Updates Channel to use ME 😎 🤭**",
+                text="**Únase a Mi canal de actualizaciones para usar ME 😎 🤭**",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="Join My Updates Channel", url=f"https://t.me/{update_channel}")]
+                    [ InlineKeyboardButton(text="Únase a mi canal de actualizaciones", url=f"https://t.me/{update_channel}")]
               ])
             )
             return
         except Exception:
-            await update.reply_text("Something Wrong. Contact my Support Group")
+            await update.reply_text("Ocurre algo. Comuníquese con mi grupo de soporte")
             return
     logger.info(update.from_user)
     url = update.text
@@ -137,8 +137,8 @@ async def echo(bot, update):
     # https://github.com/rg3/youtube-dl/issues/2630#issuecomment-38635239
     if e_response and "nonnumeric port" not in e_response:
         # logger.warn("Status : FAIL", exc.returncode, exc.output)
-        error_message = e_response.replace("please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.", "")
-        if "This video is only available for registered users." in error_message:
+        error_message = e_response.replace("Informe este problema en https://yt-dl.org/bug. Asegúrese de estar utilizando la última versión; consulte https://yt-dl.org/update sobre cómo actualizar. Asegúrese de llamar a youtube-dl con la marca --verbose e incluya su salida completa.", "")
+        if "Este video solo está disponible para usuarios registrados." in error_message:
             error_message += Translation.SET_CUSTOM_USERNAME_PASSWORD
         await bot.send_message(
             chat_id=update.chat.id,
