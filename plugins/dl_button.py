@@ -232,7 +232,7 @@ async def ddl_call_back(bot, update):
                     )
                 )
             else:
-                logger.info("Did this happen? :\\")
+                logger.info("Ocurrió esto? :\\")
             end_two = datetime.now()
             try:
                 os.remove(download_directory)
@@ -267,9 +267,9 @@ async def download_coroutine(bot, session, url, file_name, chat_id, message_id, 
         await bot.edit_message_text(
             chat_id,
             message_id,
-            text="""Initiating Download
+            text="""Iniciando descarga
 URL: {}
-File Size: {}""".format(url, humanbytes(total_length))
+Tamaño del archivo: {}""".format(url, humanbytes(total_length))
         )
         with open(file_name, "wb") as f_handle:
             while True:
@@ -288,10 +288,10 @@ File Size: {}""".format(url, humanbytes(total_length))
                         (total_length - downloaded) / speed) * 1000
                     estimated_total_time = elapsed_time + time_to_completion
                     try:
-                        current_message = """**Download Status**
+                        current_message = """**Estado de descarga**
 URL: {}
-File Size: {}
-Downloaded: {}
+Tamaño del archivo: {}
+Descargado: {}
 ETA: {}""".format(
     url,
     humanbytes(total_length),
