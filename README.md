@@ -1,47 +1,47 @@
-## URL Uploader Bot
+## Bot de subida de URL
 ---
 
-An Open Source ALL-In-One Telegram RoBot, that can do lot of things.
+Un RoBot de Telegram ALL-In-One de código abierto, que puede hacer muchas cosas.
 
-**My Features**:
+**Mis caracteristicas**:
 
-👉 All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html
+👉 Todos los formatos de video admitidos de https://rg3.github.io/youtube-dl/supportedsites.html
 
-👉 Upload as file from any HTTP link
+👉 Cargar como archivo desde cualquier enlace HTTP
 
-### Installation
+### Instalación
 
-#### The Easy Way
+#### La manera fácil
 
-#### You can also tap the Deploy To Heroku button below to deploy straight to Heroku!
+#### ¡También puede tocar el botón Implementar en Heroku a continuación para implementar directamente en Heroku!
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TGExplore/TG-URL-Uploader/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AlessandroKlein/TG-URL-Uploader)
 
-**Watch our Video for Create own Bot** - 👉 https://youtu.be/QkAkSLBgoYw
+** Vea nuestro video para crear su propio bot ** - 👉 https://youtu.be/QkAkSLBgoYw
 
-#### The Hard Way
+#### El camino difícil
 
-```sh
+`` sh
 virtualenv -p python3 VENV
 . ./VENV/bin/activate
 pip install -r requirements.txt
 cp sample_config.py config.py
---- EDIT config.py values appropriately ---
+--- EDITAR los valores de config.py apropiadamente ---
 python bot.py
-```
-## Our Telegram Channel and Group
+''
+## Nuestro canal y grupo de Telegram
 
-* [TG Bots Updates](https://telegram.dog/TGBotsz)
-* [InFoTel Paid Apps](https://telegram.dog/InFoTel14)
-* [InFoTel Group](https://telegram.dog/InFoTelGroup)
+* [Actualizaciones de TG Bots] (https://telegram.dog/TGBotsz)
+* [Aplicaciones pagas de InFoTel] (https://telegram.dog/InFoTel14)
+* [Grupo InFoTel] (https://telegram.dog/InFoTelGroup)
 
-## Credits, and Thanks to
+## Créditos y gracias a
 
-* [@SpEcHlDe](https://telegram.dog/ThankTelegram) for his [AnyDLBot](https://telegram.dog/AnyDLBot)
-* [Dan Tès](https://telegram.dog/haskell) for his [Pyrogram Library](https://github.com/pyrogram/pyrogram)
-* [Yoily](https://telegram.dog/YoilyL) for his [UploaditBot](https://telegram.dog/UploaditBot)
+* [@SpEcHlDe] (https://telegram.dog/ThankTelegram) por su [AnyDLBot] (https://telegram.dog/AnyDLBot)
+* [Dan Tès] (https://telegram.dog/haskell) para su [Biblioteca de pirogramas] (https://github.com/pyrogram/pyrogram)
+* [Yoily] (https://telegram.dog/YoilyL) por su [UploaditBot] (https://telegram.dog/UploaditBot)
 
-- For FeedBack and Suggestions, please feel free to say in [InFoTel Group](https://telegram.dog/InFoTelGroup)
+- Para comentarios y sugerencias, no dude en decirlo en [Grupo InFoTel] (https://telegram.dog/InFoTelGroup)
 
-#### LICENSE
+#### LICENCIA
 - GPLv3
